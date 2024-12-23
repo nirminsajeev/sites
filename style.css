@@ -1,0 +1,42 @@
+.navbar_elements{
+    padding: 2vh;
+    color: white;
+}
+.icons_elements{
+    height: 20px;
+    fill: white;
+    color: white;
+    padding-right: 2vh;
+    
+}
+
+.profile_image{
+    width: 30%;
+    height: 50vh;
+   ;
+    display: inline-block;
+    float: left;
+    margin-left: 5vh;
+    margin-top: 8.5vh;
+}
+.about_me{
+    width: 60%;
+    height: 50vh;
+    /* background-color:wheat;  */
+    display: inline-block;
+    float: left; 
+    margin-left: 5vh; 
+    margin-top: 8.5vh;
+    text-align: start;
+}
+.button_a{
+    height: 34px;
+    width: 120px;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: black;
+    color: white;
+    border-width: 1px;
+    border-color: white;
+}
+}
