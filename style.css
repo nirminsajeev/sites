@@ -1,7 +1,13 @@
 .navbar_elements{
     padding: 2vh;
     color: white;
+    text-decoration: none;
 }
+
+.navbar_textdec{
+    text-decoration: none;
+}
+
 .icons_elements{
     height: 20px;
     fill: white;
@@ -39,4 +45,9 @@
     border-width: 1px;
     border-color: white;
 }
+
+.tr1{
+    background-color: aqua;
+     padding: 4px;
+     border-radius: 20px;
 }
