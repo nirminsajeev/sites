@@ -17,21 +17,18 @@
 }
 
 .profile_image{
-    width: 30%;
-    height: 450px;
    
     display: inline-block;
     float: left;
-    margin-left: 54px;
+   
     margin-top: 30px;
 }
 .about_me{
-    width: 60%;
-    height: 450px;
+   
     /* background-color:wheat;  */
     display: inline-block;
     float: left; 
-    margin-left: 20px; 
+   
     margin-top: 30px;
     text-align: start;
 }
