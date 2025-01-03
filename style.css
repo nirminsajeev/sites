@@ -81,3 +81,28 @@ html,body{
 .research_sect1{
     margin-top: -13px;
 }
+
+
+
+
+.marquee{
+    width: 80%;
+    background-color: antiquewhite;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.marquee div{
+    font-size: small;
+    color: white;
+    animation: animate 20s linear infinite;
+    padding-left: 100%;
+    display: inline-block;
+}
+
+@keyframes animate{
+    100%{
+        transform: translate(-100%,0);
+    }
+}
