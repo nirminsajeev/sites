@@ -10,8 +10,8 @@
 
 .icons_elements{
     height: 20px;
-    fill: white;
-    color: white;
+    fill: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
     padding-right: 21.6px;
     
 }
@@ -74,7 +74,7 @@ html,body{
     text-align: justify; 
     margin-left: 54px; 
     margin-right: 27px;
-    color: white;
+    color: rgb(0, 0, 0);
 
 }
 
@@ -87,7 +87,7 @@ html,body{
 
 .marquee{
     width: 80%;
-    background-color: antiquewhite;
+    background-color: rgb(255, 255, 255);
     text-transform: uppercase;
     white-space: nowrap;
     overflow: hidden;
@@ -95,7 +95,7 @@ html,body{
 
 .marquee div{
     font-size: small;
-    color: white;
+    color: rgb(0, 0, 0);
     animation: animate 20s linear infinite;
     padding-left: 100%;
     display: inline-block;
