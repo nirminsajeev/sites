@@ -106,3 +106,37 @@ html,body{
         transform: translate(-100%,0);
     }
 }
+
+/*  ..................... */
+/* .imagebtn{
+    background-image: url(../../icons/vanji.jpg); background-size:cover; height: 130px;
+color: white;
+}
+
+.imagediv:hover .imagebtn{
+    background-image: url(../../icons/vanji.jpg); background-size:cover; height: 130px;
+    -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+
+}
+
+.imagediv:hover .textnature{
+    font-size: 50px;
+    display: flex;  justify-content: center; align-items: center;
+    height: 120px; */
+    
+
+/* } */
+/* ................................. */
+
+.container1 {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
