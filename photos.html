@@ -73,17 +73,12 @@
               <div class="about_me col-12 col-sm-12 col-lg-8 "  >
                 <div style="display: flex;  justify-content: center; align-items: center; height: 500px">
                 <div class="row">
-                  <!-- <div class="col-sm imagediv">
-                  
-                    <div class="imagebtn"> 
-                      <h3 class="textnature">Nature</h3>
-                    </div>
-                  </div> -->
+                 
                   <div class="col-sm container1" style="object-fit: cover; height: 100%;" onclick="openModal();currentSlide(1)">
                     <img src="icons\nature1.jpg" alt="image not found" style=" border-radius: 10px; object-fit: contain;   filter: blur(2px);  -webkit-filter: blur(2px);" class="img-fluid" >
                     <div class="centered" style="font-size: 150%; font-weight: 900; text-emphasis: circle;  text-emphasis-position: under;">NATURE</div>
                   </div>
-                  <div class="col-sm container1" style="object-fit: cover;width: 100%; height: 100%;">
+                  <div class="col-sm container1" style="object-fit: cover; height: 100%;" onclick="openModal();currentSlide(1)">
                     <img src="icons\nature1.jpg" alt="image not found" style=" border-radius: 10px; object-fit: contain; filter: blur(2px);  -webkit-filter: blur(2px);" class="img-fluid" >
                     <div class="centered" style="font-size: 150%; font-weight: 900; text-emphasis: circle;  text-emphasis-position: under;">PORTRAITS</div>
                   </div>
@@ -185,6 +180,66 @@
             </div>
           </div>
         </div>
+
+        <!-- portrait -->
+        <div id="myModal2" class="modal" >
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content">
+        
+            <div class="mySlides">
+              <div class="numbertext">1 / 2</div>
+              <img src="portraits\port1.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;">
+            </div>
+        
+            <div class="mySlides">
+              <div class="numbertext">2 / 2</div>
+              <img src="portraits\port2.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;">
+            </div>
+<!--         
+            <div class="mySlides">
+              <div class="numbertext">3 / 5</div>
+              <img src="nature\kport.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;">
+            </div>
+            
+            <div class="mySlides">
+              <div class="numbertext">4 / 5</div>
+              <img src="nature\beachdog2.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;">
+            </div>
+
+            <div class="mySlides">
+              <div class="numbertext">5 / 5</div>
+              <img src="nature\city1.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;">
+            </div> -->
+            
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        
+            <div class="caption-container">
+              <p id="caption1"></p>
+            </div>
+        
+            
+            
+            <div class="row">
+              <div class="column">
+                <img class="demo cursor" src="portraits\port1.jpg" style="width:100%" onclick="currentSlide(1)" >
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="portraits\port2.jpg" style="width:100%" onclick="currentSlide(2)" >
+              </div>
+              <!-- <div class="column">
+                <img class="demo cursor" src="nature\kport.jpg" style="width:100%" onclick="currentSlide(3)" >
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="nature\beachdog2.jpg" style="width:100%" onclick="currentSlide(4)" >
+              </div>
+              <div class="column">
+                <img class="demo cursor" src="nature\city1.jpg" style="width:100%" onclick="currentSlide(5)" >
+              </div> -->
+
+            </div>
+          </div>
+        </div>
       
 
 
@@ -207,7 +262,7 @@
 
 
 
-      
+      <!--nature  -->
 <script>
   function openModal() {
     document.getElementById("myModal").style.display = "block";
@@ -247,6 +302,45 @@
   }
   </script>
 
+<!-- portraits -->
+<script>
+  function openModal() {
+    document.getElementById("myModal2").style.display = "block";
+  }
+  
+  function closeModal() {
+    document.getElementById("myModal2").style.display = "none";
+  }
+  
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption1");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+  </script>
 
 
       </body>
