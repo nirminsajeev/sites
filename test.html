@@ -127,6 +127,7 @@ img {
 
 .demo {
   opacity: 0.6;
+  height: 80px;
 }
 
 .active,
@@ -141,11 +142,32 @@ img.hover-shadow {
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.column {
+    flex:1;
+    max-width: 50%;
+    /*max width= 100% / number of images */
+    padding: 5px;
+  }
+
 </style>
 <body>
 
 <h2 style="text-align:center">Lightbox</h2>
 
+<div class="row">
+  <div class="column">
+    <img src="nature\beachdog2.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="nature\cloudscrs.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="nature\kport.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="img_lights.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
 <div class="row">
   <div class="column">
     <img src="img_nature.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
@@ -161,6 +183,7 @@ img.hover-shadow {
   </div>
 </div>
 
+<!-- nature -->
 <div id="myModal" class="modal" >
     <span class="close cursor" onclick="closeModal()">&times;</span>
     <div class="modal-content">
@@ -208,7 +231,6 @@ img.hover-shadow {
     </div>
   </div>
 
-
 <script>
 function openModal() {
   document.getElementById("myModal").style.display = "block";
@@ -248,5 +270,54 @@ function showSlides(n) {
 }
 </script>
     
+<!-- nature end -->
+ 
+<script>
+function openModal() {
+document.getElementById("myModal2").style.display = "block";
+}
+
+function closeModal() {
+document.getElementById("myModal2").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides");
+var dots = document.getElementsByClassName("demo");
+var captionText = document.getElementById("caption2");
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<!-- portrait end -->
+
+
+
+
+
+
+
+
 </body>
 </html>

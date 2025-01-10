@@ -65,7 +65,7 @@
             
             <div style="align-items: center;">
               <!-- profile pic -->
-              <div class="profile_image col-12 col-sm-12 col-lg-3 img-fluid"> 
+              <div class="profile_image col-12 col-sm-12 col-lg-3 "> 
                   <img src="icons\nir2i.jpg" alt="image not found" class="img-fluid">
               </div>
               <!-- pp end -->
@@ -74,11 +74,11 @@
                 <div style="display: flex;  justify-content: center; align-items: center; height: 500px">
                 <div class="row">
                  
-                  <div class="col-sm container1" style="object-fit: cover; height: 100%; " onclick="openModal();currentSlide(1)">
-                    <img src="icons\nature1.jpg" alt="image not found" style=" border-radius: 10px; object-fit: contain;   filter: blur(2px);  -webkit-filter: blur(2px); " class="img-fluid" >
+                  <div class="col-sm container1" style="object-fit: cover; height: 100%;" onclick="openModal();currentSlide(1)">
+                    <img src="icons\nature1.jpg" alt="image not found" style=" border-radius: 10px; object-fit: contain;   filter: blur(2px);  -webkit-filter: blur(2px);" class="img-fluid" >
                     <div class="centered" style="font-size: 150%; font-weight: 900; text-emphasis: circle;  text-emphasis-position: under;">NATURE</div>
                   </div>
-                  <div class="col-sm container1" style="object-fit: cover; height: 100%;" onclick="openModal_p();currentSlide(1)">
+                  <div class="col-sm container1" style="object-fit: cover; height: 100%;">
                     <img src="icons\nature1.jpg" alt="image not found" style=" border-radius: 10px; object-fit: contain; filter: blur(2px);  -webkit-filter: blur(2px);" class="img-fluid" >
                     <div class="centered" style="font-size: 150%; font-weight: 900; text-emphasis: circle;  text-emphasis-position: under;">PORTRAITS</div>
                   </div>
@@ -103,13 +103,14 @@
            <!-- copy right session -->
            <div style=" width: 70%;">
             
-            <div style="   display:inline-block; float: left; text-align: start;" class="col-12 col-sm-12 col-lg-5 col-md-12">
-              <br> <p style=" color: rgb(0, 0, 0); margin-left: 25px; ">Copyright &copy; 2024 nirminsajeev.in</p>
-          </div>
-
-           <div style=" display: inline-block; float: right;" class="col-12 col-sm-12 col-lg-5 col-md-12">
-               <br> <p style=" color: rgb(0, 0, 0); text-align: start; margin-left: 25px;"><a href="mailto:nirminsajeev@gmail.com" style="color: rgb(0, 0, 0); text-decoration: none;">email: nirminsajeev@gmail.com</a><br></p>
-          </div>
+            
+               <div style="height: 200px; width: 50%;  display:inline-block; float: left; text-align: start;">
+                <br> <p style=" color: rgb(0, 0, 0); margin-left: 54px;  margin-top: 75px;">Copyright &copy; 2024 nirminsajeev.in</p>
+                </div>
+             <div style="height: 200px; width: 50%; display: inline-block;float: right;">
+                 <br> <p style=" color: rgb(0, 0, 0); text-align: start; margin-left: 54px; margin-top: 75px;">
+                  <a href="mailto:nirminsajeev@gmail.com s" style="color: rgb(0, 0, 0); text-decoration: none;">email: nirminsajeev@gmail.com</a><br></p>
+                 </div>
             
            </div>
            <!-- copy right session end -->
@@ -128,27 +129,27 @@
         
             <div class="mySlides">
               <div class="numbertext">1 / 5</div>
-              <img src="nature\kferry.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;" alt="kunjithai ferry">
+              <img src="nature\kferry.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;">
             </div>
         
             <div class="mySlides">
               <div class="numbertext">2 / 5</div>
-              <img src="nature\sunrays.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;" alt="kunjithai ferry">
+              <img src="nature\sunrays.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;">
             </div>
         
             <div class="mySlides">
               <div class="numbertext">3 / 5</div>
-              <img src="nature\kport.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;" alt="kunjithai ferry">
+              <img src="nature\kport.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;">
             </div>
             
             <div class="mySlides">
               <div class="numbertext">4 / 5</div>
-              <img src="nature\beachdog2.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;" alt="kunjithai ferry">
+              <img src="nature\beachdog2.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;">
             </div>
 
             <div class="mySlides">
               <div class="numbertext">5 / 5</div>
-              <img src="nature\city1.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;" alt="kunjithai ferry">
+              <img src="nature\city1.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;">
             </div>
             
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -159,7 +160,7 @@
             </div>
         
             
-            <div class="row" style="background-color: black;">
+            <div class="row">
               <div class="column">
                 <img class="demo cursor" src="nature\kferry.jpg" style="width:100%" onclick="currentSlide(1)" >
               </div>
@@ -181,42 +182,7 @@
         </div>
 
         <!-- portrait -->
-        <div id="myModal_p" class="modal_p" >
-          <span class="close_p cursor_p" onclick="closeModal_p()">&times;</span>
-          <div class="modal-content_p">
         
-            <div class="mySlides_p">
-              <div class="numbertext_p">1 / 2</div>
-              <img src="portraits\port1.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;">
-            </div>
-        
-            <div class="mySlides_p" style="background-color: black;">
-              <div class="numbertext_p">2 / 2</div>
-              <img src="portraits\port2.jpg" style="width:100%;height: 100%; height: 400px; object-fit: contain;">
-            </div>
-        
-           
-            
-            <a class="prev_p" onclick="plusSlides_p(-1)">&#10094;</a>
-            <a class="next_p" onclick="plusSlides_p(1)">&#10095;</a>
-        
-            <div class="caption-container_p">
-              <p id="caption_p"></p>
-            </div>
-        
-            
-            <div class="row" style="background-color: black;" >
-              <div class="column"  >
-                <img class="demo_p cursor_p"  src="portraits\port1.jpg" style="float: inline-end;" onclick="currentSlide(1)"  >
-              </div>
-              <div class="column">
-                <img class="demo_p cursor_p" src="portraits\port2.jpg" style="float:inline-start"  onclick="currentSlide(2)" >
-              </div>
-              
-
-            </div>
-          </div>
-        </div>
 
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
@@ -268,44 +234,7 @@
   </script>
 
 <!-- portraits -->
-<script>
-  function openModal_p() {
-    document.getElementById("myModal_p").style.display = "block";
-  }
-  
-  function closeModal_p() {
-    document.getElementById("myModal_p").style.display = "none";
-  }
-  
-  var slideIndex_p = 1;
-  showSlides_p(slideIndex_p);
-  
-  function plusSlides_p(n) {
-    showSlides_p(slideIndex_p += n);
-  }
-  
-  function currentSlide_p(n) {
-    showSlides_p(slideIndex_p = n);
-  }
-  
-  function showSlides_p(n) {
-    var i;
-    var slides_p = document.getElementsByClassName("mySlides_p");
-    var dots_p = document.getElementsByClassName("demo_p");
-    var captionText_p = document.getElementById("caption_p");
-    if (n > slides_p.length) {slideIndex_p = 1}
-    if (n < 1) {slideIndex_p = slides_p.length}
-    for (i = 0; i < slides_p.length; i++) {
-        slides_p[i].style.display = "none";
-    }
-    for (i = 0; i < dots_p.length; i++) {
-        dots_p[i].className = dots_p[i].className.replace(" active", "");
-    }
-    slides_p[slideIndex_p-1].style.display = "block";
-    dots_p[slideIndex_p-1].className += " active";
-    captionText_p.innerHTML = dots_p[slideIndex_p-1].alt;
-  }
-  </script>
+
 
 
       </body>
