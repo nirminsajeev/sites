@@ -78,7 +78,7 @@
                     <img src="icons\nature1.jpg" alt="image not found" style=" border-radius: 10px; object-fit: contain;   filter: blur(2px);  -webkit-filter: blur(2px);" class="img-fluid" >
                     <div class="centered" style="font-size: 150%; font-weight: 900; text-emphasis: circle;  text-emphasis-position: under;">NATURE</div>
                   </div>
-                  <div class="col-sm container1" style="object-fit: cover; height: 100%;" onclick="openModal();currentSlide(1)">
+                  <div class="col-sm container1" style="object-fit: cover; height: 100%;" onclick="openModalport();currentSlide(1)">
                     <img src="icons\nature1.jpg" alt="image not found" style=" border-radius: 10px; object-fit: contain; filter: blur(2px);  -webkit-filter: blur(2px);" class="img-fluid" >
                     <div class="centered" style="font-size: 150%; font-weight: 900; text-emphasis: circle;  text-emphasis-position: under;">PORTRAITS</div>
                   </div>
@@ -182,17 +182,17 @@
         </div>
 
         <!-- portrait -->
-        <div id="myModal2" class="modal" >
-          <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div id="myModalport" class="modalport" >
+          <span class="closeport cursorport" onclick="closeModalport()">&times;</span>
           <div class="modal-content">
         
-            <div class="mySlides">
-              <div class="numbertext">1 / 2</div>
+            <div class="mySlidesport">
+              <div class="numbertextport">1 / 2</div>
               <img src="portraits\port1.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;">
             </div>
         
-            <div class="mySlides">
-              <div class="numbertext">2 / 2</div>
+            <div class="mySlidesport">
+              <div class="numbertextport">2 / 2</div>
               <img src="portraits\port2.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;">
             </div>
 <!--         
@@ -211,21 +211,21 @@
               <img src="nature\city1.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;">
             </div> -->
             
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prevport" onclick="plusSlidesport(-1)">&#10094;</a>
+            <a class="nextport" onclick="plusSlidesport(1)">&#10095;</a>
         
-            <div class="caption-container">
-              <p id="caption1"></p>
+            <div class="caption-containerport">
+              <p id="captionport"></p>
             </div>
         
             
             
             <div class="row">
               <div class="column">
-                <img class="demo cursor" src="portraits\port1.jpg" style="width:100%" onclick="currentSlide(1)" >
+                <img class="demoport cursorport" src="portraits\port1.jpg" style="width:100%" onclick="currentSlideport(1)" >
               </div>
               <div class="column">
-                <img class="demo cursor" src="portraits\port2.jpg" style="width:100%" onclick="currentSlide(2)" >
+                <img class="demoport cursorport" src="portraits\port2.jpg" style="width:100%" onclick="currentSlideport(2)" >
               </div>
               <!-- <div class="column">
                 <img class="demo cursor" src="nature\kport.jpg" style="width:100%" onclick="currentSlide(3)" >
@@ -300,45 +300,44 @@
     dots[slideIndex-1].className += " active";
     captionText.innerHTML = dots[slideIndex-1].alt;
   }
-  </script>
+  
+// portraits
 
-<!-- portraits -->
-<script>
-  function openModal() {
-    document.getElementById("myModal2").style.display = "block";
+  function openModalport() {
+    document.getElementById("myModalport").style.display = "block";
   }
   
-  function closeModal() {
-    document.getElementById("myModal2").style.display = "none";
+  function closeModalport() {
+    document.getElementById("myModalport").style.display = "none";
   }
   
-  var slideIndex = 1;
-  showSlides(slideIndex);
+  var slideIndexport = 1;
+  showSlidesport(slideIndexport);
   
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
+  function plusSlidesport(nport) {
+    showSlidesport(slideIndexport += nport);
   }
   
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
+  function currentSlideport(nport) {
+    showSlidesport(slideIndexport = nport);
   }
   
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("demo");
-    var captionText = document.getElementById("caption1");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+  function showSlidesport(nport) {
+    var iport;
+    var slidesport = document.getElementsByClassName("mySlidesport");
+    var dotsport = document.getElementsByClassName("demoport");
+    var captionTextport = document.getElementById("captionport");
+    if (nport > slidesport.length) {slideIndexport = 1}
+    if (nport < 1) {slideIndexport = slidesport.length}
+    for (iport = 0; iport < slidesport.length; iport++) {
+        slidesport[iport].style.display = "none";
     }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+    for (iport = 0; iport < dotsport.length; iport++) {
+        dotsport[iport].className = dotsport[iport].className.replace(" active", "");
     }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
+    slidesport[slideIndexport-1].style.display = "block";
+    dotsport[slideIndexport-1].className += " active";
+    captionTextport.innerHTML = dotsport[slideIndexport-1].alt;
   }
   </script>
 
