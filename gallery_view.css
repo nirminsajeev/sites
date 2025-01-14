@@ -43,6 +43,20 @@
     overflow: auto;
     background-color: black;
   }
+
+  /* w */
+  .modal_w {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+  }
   
   /* Modal Content */
   .modal-content {
@@ -62,6 +76,17 @@
     width: 100%;
     max-width: 800px;
   }
+
+  /* w */
+  .modal-content_w {
+    position:relative;
+    background-color: #ffffff;
+    margin: auto;
+    padding: 0;
+    width: 100%;
+    max-width: 800px;
+  }
+
   
   /* The Close Button */
   .close {
@@ -81,6 +106,17 @@
     font-size: 35px;
     font-weight: bold;
   }
+
+/* w */
+.close_w {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
   
   .close:hover,
   .close:focus {
@@ -95,12 +131,25 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  /* w */
+  .close_w:hover,
+  .close_w:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
   
 
   .mySlides {
     display: none;
   }
+  /* p */
   .mySlides_p {
+    display: none;
+  }
+  /* p */
+  .mySlides_w {
     display: none;
   }
   
@@ -111,6 +160,11 @@
   .cursor_p {
     cursor: pointer;
   }
+/* w */
+.cursor_w {
+  cursor: pointer;
+}
+
   /* Next & previous buttons */
   .prev,
   .next {
@@ -145,6 +199,25 @@
     user-select: none;
     -webkit-user-select: none;
   }
+/* w */
+.prev_w,
+.next_w {
+  cursor: pointer;
+  position:absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
   /* Position the "next button" to the right */
   .next {
     right: 0;
@@ -152,6 +225,11 @@
   }
   /* p */
   .next_p {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  /* w */
+  .next_w {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
@@ -166,6 +244,11 @@
   .next_p:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
+  /* w */
+  .prev_w:hover,
+  .next_w:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
   
   /* Number text (1/3 etc) */
   .numbertext {
@@ -177,6 +260,15 @@
   }
   /* p */
   .numbertext_p {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* w */
+  .numbertext_w {
     color: #f2f2f2;
     font-size: 12px;
     padding: 8px 12px;
@@ -201,12 +293,26 @@
     padding: 2px 16px;
     color: white;
   }
-  
+
+  /* w */
+  .caption-container_w {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+  /* n */
   .demo {
     opacity: 1;
     height: 80px;
   }
+  /* p */
   .demo_p {
+    opacity: 1;
+    height: 80px;
+  }
+  /* w */
+  .demo_w {
     opacity: 1;
     height: 80px;
   }
@@ -220,6 +326,13 @@
   .demo_p:hover {
     opacity: 1;
   }
+
+  /* w */
+  .active,
+  .demo_w:hover {
+    opacity: 1;
+  }
+
   
   img.hover-shadow {
     transition: 0.3s;

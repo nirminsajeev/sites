@@ -23,16 +23,16 @@
                     <a class="navbar-brand col-lg-3 me-0" href="#">NKS</a>
                     <ul class="navbar-nav col-lg-6 justify-content-lg-center">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link active" href="index.html">Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="about.html">About</a>
+                        <a class="nav-link active"  href="about.html">About</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="photos.html">Gallery</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="projects.html">Projects</a>
+                        <a class="nav-link active" href="projects.html">Projects</a>
                       </li>
                       
                     </ul>
@@ -82,7 +82,7 @@
                     <img src="icons\nature1.jpg" alt="image not found" style=" border-radius: 10px; object-fit: contain; filter: blur(2px);  -webkit-filter: blur(2px);" class="img-fluid hover-shadow" >
                     <div class="centered" style="font-size: 150%; font-weight: 900; text-emphasis: circle;  text-emphasis-position: under;">PORTRAITS</div>
                   </div>
-                  <div class="col-sm container1" style="object-fit: cover;width: 100%; height: 100%;">
+                  <div class="col-sm container1" style="object-fit: cover;width: 100%; height: 100%;" onclick="openModal_w();currentSlide(1)">
                     <img src="icons\nature1.jpg" alt="image not found" style=" border-radius: 10px; object-fit: contain;   filter: blur(2px);  -webkit-filter: blur(2px);" class="img-fluid hover-shadow" >
                     <div class="centered" style="font-size: 150%; font-weight: 900; text-emphasis: circle;  text-emphasis-position: under;">WEATHER</div>
                   </div>
@@ -218,6 +218,44 @@
           </div>
         </div>
 
+        <!-- weather -->
+        <div id="myModal_w" class="modal_w" >
+          <span class="close_w cursor_w" onclick="closeModal_w()">&times;</span>
+          <div class="modal-content_w">
+        
+            <div class="mySlides_w">
+              <div class="numbertext_w">1 / 2</div>
+              <img src="icons\rain_1.jpg" style="width:100%;height: 100%; height: 400px; object-fit: cover;">
+            </div>
+        
+            <div class="mySlides_w" style="background-color: black;">
+              <div class="numbertext_w">2 / 2</div>
+              <img src="icons\maha1.jpg" style="width:100%;height: 100%; height: 400px; object-fit: contain;">
+            </div>
+        
+           
+            
+            <a class="prev_w" onclick="plusSlides_w(-1)">&#10094;</a>
+            <a class="next_w" onclick="plusSlides_w(1)">&#10095;</a>
+        
+            <div class="caption-container_w">
+              <p id="caption_w"></p>
+            </div>
+        
+            
+            <div class="row" style="background-color: black;" >
+              <div class="column"  >
+                <img class="demo_w cursor_w"  src="icons\rain_1.jpg" style="float: inline-end;" onclick="currentSlide(1)"  >
+              </div>
+              <div class="column">
+                <img class="demo_w cursor_w" src="icons\maha1.jpg" style="float:inline-start"  onclick="currentSlide(2)" >
+              </div>
+              
+
+            </div>
+          </div>
+        </div>
+
 
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>    
@@ -304,6 +342,45 @@
     slides_p[slideIndex_p-1].style.display = "block";
     dots_p[slideIndex_p-1].className += " active";
     captionText_p.innerHTML = dots_p[slideIndex_p-1].alt;
+  }
+  </script>
+<!-- weather -->
+<script>
+  function openModal_w() {
+    document.getElementById("myModal_w").style.display = "block";
+  }
+  
+  function closeModal_w() {
+    document.getElementById("myModal_w").style.display = "none";
+  }
+  
+  var slideIndex_w = 1;
+  showSlides_w(slideIndex_p);
+  
+  function plusSlides_w(n) {
+    showSlides_w(slideIndex_p += n);
+  }
+  
+  function currentSlide_w(n) {
+    showSlides_w(slideIndex_w = n);
+  }
+  
+  function showSlides_w(n) {
+    var i;
+    var slides_w = document.getElementsByClassName("mySlides_w");
+    var dots_w = document.getElementsByClassName("demo_w");
+    var captionText_w = document.getElementById("caption_w");
+    if (n > slides_w.length) {slideIndex_w = 1}
+    if (n < 1) {slideIndex_w = slides_w.length}
+    for (i = 0; i < slides_w.length; i++) {
+        slides_w[i].style.display = "none";
+    }
+    for (i = 0; i < dots_w.length; i++) {
+        dots_w[i].className = dots_w[i].className.replace(" active", "");
+    }
+    slides_w[slideIndex_w-1].style.display = "block";
+    dots_w[slideIndex_w-1].className += " active";
+    captionText_w.innerHTML = dots_w[slideIndex_w-1].alt;
   }
   </script>
 
