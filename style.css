@@ -23,6 +23,16 @@
    
     margin-top: 30px;
 }
+
+.profile_imageg{
+   
+    display: inline-block;
+    float: left;
+   
+    margin-top: 30px;
+}
+
+
 .about_me{
    
     /* background-color:wheat;  */
@@ -32,6 +42,17 @@
     margin-top: 30px;
     text-align: start;
 }
+
+.about_meg{
+   
+    /* background-color:wheat;  */
+    display: inline-block;
+    float: right; 
+   
+    margin-top: 30px;
+    /* text-align: start; */
+}
+
 .button_a{
     height: 34px;
     width: 120px;
